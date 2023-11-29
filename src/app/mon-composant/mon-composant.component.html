@@ -1,0 +1,24 @@
+<h1>Bienvenue dans mon composant !</h1>
+<p>{{ message }}</p>
+<button (click)="onBoutonClic()">Cliquez-moi</button>
+<!-- formulaire-ngmodel.component.html -->
+
+<form>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" [(ngModel)]="nom" />
+  
+    <p>Contenu du champ de saisie : {{ nom }}</p>
+  
+    <button (click)="reinitialiserChamp()">Réinitialiser</button>
+  </form>
+  
+  <div *ngIf="nombres.length > 0">
+    <h2>Liste des nombres :</h2>
+    <ul>
+      <li *ngFor="let nombre of nombres">{{ nombre }}</li>
+    </ul>
+  </div>
+  
+  <div *ngIf="nombres.length <= 0">
+    <p>La liste est vide.</p>
+  </div>
